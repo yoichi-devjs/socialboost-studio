@@ -1,0 +1,223 @@
+/*
+
+RESET RULES
+
+- removes margins on headings
+- removes padding on body
+- removes default font inconsistencies
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body */
+body {
+    font-size: 16px;
+    /* Standard SaaS baseline for good readability */
+    background: #f9fafb;
+    /* Background modern SaaS color feel */
+}
+/* Hero section */
+#hero {
+    display: flex;
+    /* "flex" turns
+    - horizontal layout by default 
+    - left/right in columns
+    - children align in a row */
+    gap: 40px;
+    /* creates "breathing" space between
+    - marketing side
+    - tool side */
+    align-items: flex-start;
+    /* ensures both sides are vertically
+    aligned in the middle */
+    min-height: 70vh;
+    /* makes hero feel like 
+    a real landing page section 
+    and gives "app landing" presence
+    (space from the top) */
+    padding: 60px 0;
+    /* gives breathing space top/bottom 
+    and makes it feel like a real landing section */
+    justify-content: space-between;
+    /* pushes left and right aparrt
+    - creates split layout 
+    - avoids clumped center */
+    margin-top: 40px;
+}
+/* container setting up (from the sides) */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+/* left-side global */
+.left-side {
+    max-width: 520px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* h1 styling */
+.left-side h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #111827;
+}
+/* paragraph styling */
+.left-side p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* right side CARD UI*/
+.right-side {
+    background: #ffffff;
+    /* gives the "app window" feeling */
+    padding: 24px;
+    /* creating internal breathing space*/
+    border-radius: 16px;
+    /* makes it feel like 
+    dashboard style */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* gives shadow and separates 
+    SaaS product UI
+    creating a tool and not just a page */
+    width: 100%;
+    max-width: 420px;
+}
+
+.right-side h2 {
+    margin-bottom: 12px;
+}
+
+.right-side textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+}
+
+.right-side button {
+    margin-bottom: 16px;
+}
+
+/* input */
+#product-gen {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    resize: none;
+    outline: none;
+    font-size: 14px;
+}
+/* shows active tool input
+and improves usability */
+#product-gen:focus {
+    border: 1px solid #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* generate button */
+#generate {
+    width: 100%;
+    margin-top: 10px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+/* adding the hover effect on the generate button */ 
+#generate:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* output box */
+#output {
+    margin-top: 16px;
+    padding: 14px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+/* output title */
+#output-title {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #111827;
+    font-weight: 600;
+}
+
+/* output text */
+#output-text {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* creating strong contrast
+rounded edges 
+clear click */
+#begin {
+    background: #111827;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#begin:hover {
+    background: #1f2937;
+}
+
+.result-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.result-card h4 {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #111827;
+}
+
+.result-card p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+/* adding the "copy" button on each result */
+.copy-btn {
+    margin-top: 8px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #111827;
+    color: white;
+    font-size: 12px;
+}
+/* implementing the hover effect on the copy button */
+.copy-btn:hover {
+    background: #1f2937;
+}
